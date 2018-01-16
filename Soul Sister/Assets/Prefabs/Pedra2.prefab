@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4797055801510916}
   - component: {fileID: 33291843689465036}
   - component: {fileID: 23598947116202586}
+  - component: {fileID: 64615406234463606}
   m_Layer: 0
   m_Name: Pedra2
   m_TagString: Untagged
@@ -34,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268839207855454}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.439915, y: 3.9707835, z: -2.6116362}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.04771146, z: -0, w: 0.9988612}
+  m_LocalPosition: {x: 398.7, y: 10.9, z: 13.7}
+  m_LocalScale: {x: 29.58865, y: 29.58865, z: 29.58865}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -5.4690003, z: 0}
 --- !u!23 &23598947116202586
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -79,4 +80,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268839207855454}
+  m_Mesh: {fileID: 4300000, guid: b628fc7a0e5e91a4c933aaa86da0244d, type: 3}
+--- !u!64 &64615406234463606
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1268839207855454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: b628fc7a0e5e91a4c933aaa86da0244d, type: 3}
