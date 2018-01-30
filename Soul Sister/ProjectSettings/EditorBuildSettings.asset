@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Terreno.unity
     guid: 631b7e6117941454781e97afdbd90185
+  - enabled: 1
+    path: Assets/Scenes/TelaLoad.unity
+    guid: d9e059a806c6f964fa660f26b380b97d

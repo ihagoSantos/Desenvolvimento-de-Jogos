@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -679,6 +679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40441d04e7f0100438c826f6f873393b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  efeitoClick: {fileID: 8300000, guid: 438aa3c1164a6b04c86363d56d293891, type: 3}
+  menuTheme: {fileID: 8300000, guid: 06cbf341ec6565a4ab6831546a53393b, type: 3}
 --- !u!82 &1023402090
 AudioSource:
   m_ObjectHideFlags: 0
@@ -688,7 +690,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 06cbf341ec6565a4ab6831546a53393b, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.56
   m_Pitch: 1
@@ -704,7 +706,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
