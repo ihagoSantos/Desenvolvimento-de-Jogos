@@ -1,14 +1,92 @@
 fileFormatVersion: 2
-guid: b70979dbd42b3384fa4150d14feec877
-timeCreated: 1517158204
+guid: 41c12b30a77588c4a81bc1a9bb4ce897
+timeCreated: 1517080366
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName: {}
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: AnteBra_oD
+    100002: AnteBra_oE
+    100004: Bones
+    100006: //RootNode
+    100008: Bra_oD
+    100010: Bra_oE
+    100012: Cabe_aD
+    100014: Cabe_aE
+    100016: Cabelo
+    100018: CanelaD
+    100020: CanelaE
+    100022: Chifre_e_Cabelo_000
+    100024: Cifre
+    100026: CoxaD
+    100028: CoxaE
+    100030: Dedos1D
+    100032: Dedos1E
+    100034: Espinha
+    100036: MeshChar
+    100038: MeshChar_001
+    100040: PalmaMaoD
+    100042: PalmaMaoE
+    100044: PeD
+    100046: PeE
+    100048: PolegarD
+    100050: PolegarE
+    100052: PontasDedosD
+    100054: PontasDedosE
+    400000: AnteBra_oD
+    400002: AnteBra_oE
+    400004: Bones
+    400006: //RootNode
+    400008: Bra_oD
+    400010: Bra_oE
+    400012: Cabe_aD
+    400014: Cabe_aE
+    400016: Cabelo
+    400018: CanelaD
+    400020: CanelaE
+    400022: Chifre_e_Cabelo_000
+    400024: Cifre
+    400026: CoxaD
+    400028: CoxaE
+    400030: Dedos1D
+    400032: Dedos1E
+    400034: Espinha
+    400036: MeshChar
+    400038: MeshChar_001
+    400040: PalmaMaoD
+    400042: PalmaMaoE
+    400044: PeD
+    400046: PeE
+    400048: PolegarD
+    400050: PolegarE
+    400052: PontasDedosD
+    400054: PontasDedosE
+    2300000: Chifre_e_Cabelo_000
+    2300002: MeshChar_001
+    3300000: Chifre_e_Cabelo_000
+    3300002: MeshChar_001
+    4300000: MeshChar
+    4300002: MeshChar_001
+    4300004: Chifre_e_Cabelo_000
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: MeshChar
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_001
+    second: {fileID: 2100000, guid: 097ebb1336b939a4a92749078c53dab2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__Corpo_002
+    second: {fileID: 2100000, guid: 53e75fcb63b4e944ab26786799f68794, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -21,6 +99,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
