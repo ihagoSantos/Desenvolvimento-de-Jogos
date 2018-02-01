@@ -46,6 +46,7 @@ public class EnemyBehavior : MonoBehaviour {
     private Vector3 posInicial;
     private VisaoSimples visao;
     private bool viuPlayerAntes = false;
+    private Arma arma;
 
 
     // Use this for initialization
@@ -57,6 +58,7 @@ public class EnemyBehavior : MonoBehaviour {
         this.controllerLife.inicializar(stBase);
         this.controllerLife.setEstadoAtual(Enumerates.estadoDeVida.Vivo);
         this.posInicial = new Vector3((float)Math.Round(transform.position.x, 1), 0, (float)Math.Round(transform.position.z, 1));
+        this.arma = GetComponentInChildren<Arma>();
         Debug.Log(this.posInicial);
         this.visao = GetComponentInChildren<VisaoSimples>();
         this.selectFollowMode();
@@ -70,6 +72,7 @@ public class EnemyBehavior : MonoBehaviour {
         this.distanciaDoPlayer = Vector3.Distance(transform.position, this.player.position);
         if (this.controllerLife.getEstadoAtual().Equals(Enumerates.estadoDeVida.Vivo))
         {
+            this.arma.setAtk(false);
             if (this.estadoAtual.Equals(Enumerates.estadoComportamento.IDLE))
             {
                 //Faz animação de idle     
@@ -78,7 +81,7 @@ public class EnemyBehavior : MonoBehaviour {
             {
 
                 if (this.distanciaDoPlayer <= distanciaDeAtk) {
-                    Debug.Log("ficou menor");
+                   // Debug.Log("ficou menor");
                     this.estadoAtual = Enumerates.estadoComportamento.ATACAR;
                 }
                 else {
@@ -92,7 +95,7 @@ public class EnemyBehavior : MonoBehaviour {
             }
             else if (this.estadoAtual.Equals(Enumerates.estadoComportamento.ATACAR))
             {
-                Debug.Log("Entrou no atacando");
+                //Debug.Log("Entrou no atacando");
                 this.nav.SetDestination(transform.position);
                 if (distanciaDoPlayer > this.distanciaDeAtk && this.visao.getVendoPlayer())
                 {
@@ -107,15 +110,19 @@ public class EnemyBehavior : MonoBehaviour {
                     //faz o que é referente ao ataque
                     //provavelmente executa animação
                     Debug.Log("atacando");
+                    this.arma.setAtk(true);
+                    //Esse trecho a abaixo é só para teste da arma
+                    this.arma.setPosition(new Vector3(0, 0, 1.6f));
+                    //this.arma.setPosition(new Vector3(0, 0, -0.5f));
                 }
             }
             else if (this.estadoAtual.Equals(Enumerates.estadoComportamento.VOLTARPISICAOINICIAL))
             {
-                Debug.Log("voltando");
+                //Debug.Log("voltando");
                 this.nav.SetDestination(this.posInicial);
                 if (transform.position.x == this.posInicial.x && transform.position.z == this.posInicial.z)
                 {
-                    Debug.Log("chegeu na pos inicial");
+                    //Debug.Log("chegeu na pos inicial");
                     this.estadoAtual = this.aoVoltarPosicaoInicial;
                 }
             }
@@ -164,14 +171,14 @@ public class EnemyBehavior : MonoBehaviour {
         //Debug.Log(timer);
         if (this.visao.getVendoPlayer() && this.estadoAtual!= Enumerates.estadoComportamento.ATACAR)
         {
-            Debug.Log("vi ele");
+           // Debug.Log("vi ele");
             this.estadoAtual = this.aoVerPlayer;
             this.viuPlayerAntes = true;
             timer = 0;
         }
         else if(this.visao.getVendoPlayer() == false && timer >= this.tempoDesistirDeSeguir && this.viuPlayerAntes)
         {
-            Debug.Log("Perdi ele ");
+           // Debug.Log("Perdi ele ");
             timer = 0;
             this.estadoAtual = this.aoPerderPlayer;
             this.viuPlayerAntes = false;

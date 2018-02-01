@@ -9,6 +9,9 @@ public class Enumerates {
     public enum estadoComportamento {IDLE,PATRULHAR,SEGUIR,FUGIR,ATACAR,VOLTARPISICAOINICIAL};
 
     public enum seguir { SIMPLES};
+
     public enum patrulhar { LINHARETA};
+
+    public enum tipoCriatura { INIMIGO,PLAYER};
 
 }

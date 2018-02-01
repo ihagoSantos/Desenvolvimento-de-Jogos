@@ -9,10 +9,15 @@ public class Arma : MonoBehaviour {
     private float danoBase = 1;
     [SerializeField]
     private float multDanoCausado = 1;
+    [SerializeField]
+    private Enumerates.tipoCriatura tipo;
+    [SerializeField]
+    private bool atacando = false;
     private ControllerLife portadorController;
+
     // Use this for initialization
     void Start () {
-        this.portadorController = GetComponent<ControllerLife>();
+        this.portadorController = GetComponentInParent<ControllerLife>();
 	}
 	
 	// Update is called once per frame
@@ -26,13 +31,34 @@ public class Arma : MonoBehaviour {
     }
 
     
-    public void causarDano(ControllerLife alvoAtingido)
+    private void causarDano(ControllerLife alvoAtingido)
     {
-        if (this.portadorController.getEstadoAtual().Equals(Enumerates.estadoComportamento.ATACAR))
-        {
+        if (this.atacando) {
             this.calcularDanoTotal();
             alvoAtingido.receberDano(this.danoTotal);
         }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (tipo == Enumerates.tipoCriatura.INIMIGO && other.gameObject.tag=="Player") {
+            Debug.Log("causouDano");
+            this.causarDano(other.GetComponent<ControllerLife>());
+        }
+        else if(tipo == Enumerates.tipoCriatura.PLAYER && other.gameObject.tag == "Enemy") {
+            this.causarDano(other.GetComponent<ControllerLife>());
+        }
+    }
+
+    public void setAtk(bool atk)
+    {
+        this.atacando = atk;
+    }
+
+    public void setPosition(Vector3 vector)
+    {
+        transform.localPosition = vector;
     }
 
 }

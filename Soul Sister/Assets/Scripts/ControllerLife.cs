@@ -43,7 +43,7 @@ public class ControllerLife : MonoBehaviour {
     public void receberDano(float dano)
     {
         float vidaRestante = this.calcularDanoRecebido(dano);
-        if (vidaRestante > this.vidaTotal)
+        if (vidaRestante <= 0)
         {
             this.morrer();
             vidaRestante = 0;
@@ -86,7 +86,13 @@ public class ControllerLife : MonoBehaviour {
     //Recupera a quantidade de vida atual;
     public float getVidaAtual()
     {
+        //Debug.Log(this.status.getVida());
         return this.statusAtual.getVida();
+    }
+
+    public float getVidaTotal()
+    {
+        return this.vidaTotal;
     }
 
     public float getDano()
@@ -130,7 +136,12 @@ public class ControllerLife : MonoBehaviour {
 
     private float calcularDanoRecebido(float dano)
     {
-        return this.statusAtual.getVida() + this.statusAtual.getDefesa() - dano*this.multDanoRecebido;
+        float danoR = this.statusAtual.getDefesa() - dano * this.multDanoRecebido;
+        if (danoR >= 0) {
+            danoR = 1;
+        }
+        Debug.Log("levei " + danoR);
+        return this.statusAtual.getVida() + danoR;
     }
 
 }
