@@ -25,19 +25,24 @@ public class MenuEvents : MonoBehaviour {
 	public void newGameEvent(){
 		
 		source.PlayOneShot(efeitoClick);
-		Application.LoadLevel(1);
+		Application.LoadLevel(2);
 	
 	}
 
 	public void loadEvent(){
 
 		source.PlayOneShot(efeitoClick);
-		Application.LoadLevel(2);
+		Application.LoadLevel(1);
 	
 	}
 
 	public void creditsEvent(){
-
+		source.PlayOneShot(efeitoClick);
+		Application.LoadLevel(4);
+	}
+	public void backToMenuEvent(){
+		source.PlayOneShot(efeitoClick);
+		Application.LoadLevel(0);
 	}
 
 }
