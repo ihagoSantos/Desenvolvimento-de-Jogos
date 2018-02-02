@@ -19,7 +19,7 @@ public class CameraFollow : MonoBehaviour {
     // Use this for initialization
     void Start () {
         this.player = GameObject.FindGameObjectWithTag("Player");
-        // this.cameraOffset = new Vector3(transform.position.x, transform.position.y, transform.position.z);//Deslocamento para o câmera não ficar "dentro" do player
+         this.cameraOffset = new Vector3(transform.position.x, transform.position.y, transform.position.z);//Deslocamento para o câmera não ficar "dentro" do player
         this.cameraOffset = new Vector3(this.deslocamentoX, this.deslocamentoY, this.deslocamentoZ);//Deslocamento para o câmera não ficar "dentro" do player
     }
 	
@@ -27,5 +27,5 @@ public class CameraFollow : MonoBehaviour {
 	void Update () {
         this.cameraOffset = new Vector3(this.deslocamentoX, this.deslocamentoY, this.deslocamentoZ);
         transform.position = this.player.transform.position + this.cameraOffset;
-	}
+    }
 }

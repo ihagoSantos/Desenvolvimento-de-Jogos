@@ -162,12 +162,12 @@ public class EnemyBehavior : MonoBehaviour {
     {
 
         timer += Time.deltaTime;
-        /*
-         * Só usado para depurar
+        
+        //Só usado para depurar
         this.visao.setAbertura(this.aberturaDeVisao);
         this.visao.setAltura(this.alturaDeVisao);
         this.visao.setLargura(this.larguraDeVisao);
-        this.visao.setRaio(this.raioDeVisao);*/
+        this.visao.setRaio(this.raioDeVisao);
         //Debug.Log(timer);
         if (this.visao.getVendoPlayer() && this.estadoAtual!= Enumerates.estadoComportamento.ATACAR)
         {
