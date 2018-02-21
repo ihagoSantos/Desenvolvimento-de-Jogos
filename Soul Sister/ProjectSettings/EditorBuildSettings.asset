@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 83a216853c994334ca87bc15077fad17
+  - enabled: 1
+    path: Assets/Scenes/TelaLoad.unity
+    guid: d9e059a806c6f964fa660f26b380b97d
+  - enabled: 1
+    path: Assets/Scenes/Terreno.unity
+    guid: 631b7e6117941454781e97afdbd90185
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 4c47c7ae2e526ef4b8a79ed9a8659f04
+  - enabled: 1
+    path: Assets/Scenes/TelaCredits.unity
+    guid: 64a305871c63f1e4882faa0ddd53467c

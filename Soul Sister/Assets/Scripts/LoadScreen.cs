@@ -18,6 +18,6 @@ public class LoadScreen : MonoBehaviour {
 	}
 	public void backEvents(){
 		source.PlayOneShot(efeitoClick);
-		Application.LoadLevel(1);
+		Application.LoadLevel(0);
 	}
 }
