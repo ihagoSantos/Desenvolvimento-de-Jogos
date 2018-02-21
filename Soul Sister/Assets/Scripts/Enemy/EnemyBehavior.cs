@@ -24,6 +24,8 @@ public class EnemyBehavior : MonoBehaviour {
     [SerializeField]
     private Enumerates.estadoComportamento aoVoltarPosicaoInicial;
     [SerializeField]
+    private Enumerates.estadoComportamento aoReceberDano;
+    [SerializeField]
     private Enumerates.estadoComportamento estadoAtual;//Informa qual comportamento o inimigo está executando
     [SerializeField]
     private float alturaDeVisao = 1;
@@ -116,6 +118,11 @@ public class EnemyBehavior : MonoBehaviour {
                     //this.arma.setPosition(new Vector3(0, 0, -0.5f));
                 }
             }
+            else if (this.estadoAtual.Equals(Enumerates.estadoComportamento.RECEBERDANO)) {
+                transform.LookAt(this.player);
+                this.estadoAtual = this.aoReceberDano;
+
+            }
             else if (this.estadoAtual.Equals(Enumerates.estadoComportamento.VOLTARPISICAOINICIAL))
             {
                 //Debug.Log("voltando");
@@ -188,6 +195,11 @@ public class EnemyBehavior : MonoBehaviour {
             this.viuPlayerAntes = true;
         }
 
+    }
+
+    public void setEstadoComp(Enumerates.estadoComportamento estado)
+    {
+        this.estadoAtual = estado;
     }
     /*
     private void viuPlayer(RaycastHit hit)

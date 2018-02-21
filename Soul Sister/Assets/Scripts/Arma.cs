@@ -47,7 +47,16 @@ public class Arma : MonoBehaviour {
             this.causarDano(other.GetComponent<ControllerLife>());
         }
         else if(tipo == Enumerates.tipoCriatura.PLAYER && other.gameObject.tag == "Enemy") {
+            Debug.Log("causou Dano no inimigo");
             this.causarDano(other.GetComponent<ControllerLife>());
+                        other.GetComponent<EnemyBehavior>().setEstadoComp(Enumerates.estadoComportamento.RECEBERDANO);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy") {
+            this.setAtk(false);
         }
     }
 

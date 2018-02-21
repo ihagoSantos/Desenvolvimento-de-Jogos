@@ -6,7 +6,7 @@ public class Enumerates {
 
     public enum estadoDeVida { Vivo, Morto };
 
-    public enum estadoComportamento {IDLE,PATRULHAR,SEGUIR,FUGIR,ATACAR,VOLTARPISICAOINICIAL};
+    public enum estadoComportamento {IDLE,PATRULHAR,SEGUIR,FUGIR,ATACAR,VOLTARPISICAOINICIAL,DEFAULT,RECEBERDANO};
 
     public enum seguir { SIMPLES};
 
