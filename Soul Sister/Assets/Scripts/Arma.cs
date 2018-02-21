@@ -49,6 +49,7 @@ public class Arma : MonoBehaviour {
         else if(tipo == Enumerates.tipoCriatura.PLAYER && other.gameObject.tag == "Enemy") {
             Debug.Log("causou Dano no inimigo");
             this.causarDano(other.GetComponent<ControllerLife>());
+                        other.GetComponent<EnemyBehavior>().setEstadoComp(Enumerates.estadoComportamento.RECEBERDANO);
         }
     }
 
