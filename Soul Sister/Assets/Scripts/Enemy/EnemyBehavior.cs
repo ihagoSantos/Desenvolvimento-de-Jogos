@@ -26,6 +26,10 @@ public class EnemyBehavior : MonoBehaviour {
     [SerializeField]
     private Enumerates.estadoComportamento aoReceberDano;
     [SerializeField]
+    private Enumerates.estadoComportamento aoPlayerSeAproximar;
+    [SerializeField]
+    private Enumerates.estadoComportamento aoPlayerSeAfastar;
+    [SerializeField]
     private Enumerates.estadoComportamento estadoAtual;//Informa qual comportamento o inimigo está executando
     [SerializeField]
     private float alturaDeVisao = 1;
@@ -43,6 +47,8 @@ public class EnemyBehavior : MonoBehaviour {
     private float velOlhar = 1;
     [SerializeField]
     private float distanciaPatrulha = 5;
+    [SerializeField]
+    private Animator enemyAnimator;
     private float timer = 0;
     public float distanciaDoPlayer;
     private Vector3 posInicial;
@@ -77,13 +83,14 @@ public class EnemyBehavior : MonoBehaviour {
             this.arma.setAtk(false);
             if (this.estadoAtual.Equals(Enumerates.estadoComportamento.IDLE))
             {
+                this.animIdle();
                 //Faz animação de idle     
             }
             else if (this.estadoAtual.Equals(Enumerates.estadoComportamento.SEGUIR))
             {
-
+                this.animMovement();
                 if (this.distanciaDoPlayer <= distanciaDeAtk) {
-                   // Debug.Log("ficou menor");
+                    Debug.Log("ficou menor");
                     this.estadoAtual = Enumerates.estadoComportamento.ATACAR;
                 }
                 else {
@@ -92,6 +99,7 @@ public class EnemyBehavior : MonoBehaviour {
             }
             else if (this.estadoAtual.Equals(Enumerates.estadoComportamento.PATRULHAR))
             {
+                this.animMovement();
                 this.patrulharObj.patrulharMethod();
                // Debug.Log(((PatrulharLinhaReta)this.patrulharObj).vetorPercorrido);
             }
@@ -101,7 +109,8 @@ public class EnemyBehavior : MonoBehaviour {
                 this.nav.SetDestination(transform.position);
                 if (distanciaDoPlayer > this.distanciaDeAtk && this.visao.getVendoPlayer())
                 {
-                    this.estadoAtual = this.aoVerPlayer;
+                    Debug.Log("vou seguir");
+                    this.estadoAtual = this.aoPlayerSeAfastar;
                 }
                 else if(distanciaDoPlayer > this.distanciaDeAtk && this.visao.getVendoPlayer() == false)
                 {
@@ -109,22 +118,25 @@ public class EnemyBehavior : MonoBehaviour {
                 }
                 else
                 {
+                    this.animAttack();
                     //faz o que é referente ao ataque
                     //provavelmente executa animação
-                    Debug.Log("atacando");
+                    //Debug.Log("atacando");
                     this.arma.setAtk(true);
                     //Esse trecho a abaixo é só para teste da arma
-                    this.arma.setPosition(new Vector3(0, 0, 1.6f));
+                    //this.arma.setPosition(new Vector3(0, 0, 1.6f));
                     //this.arma.setPosition(new Vector3(0, 0, -0.5f));
                 }
             }
             else if (this.estadoAtual.Equals(Enumerates.estadoComportamento.RECEBERDANO)) {
+                this.animReceberDano();
                 transform.LookAt(this.player);
                 this.estadoAtual = this.aoReceberDano;
 
             }
             else if (this.estadoAtual.Equals(Enumerates.estadoComportamento.VOLTARPISICAOINICIAL))
             {
+                this.animMovement();
                 //Debug.Log("voltando");
                 this.nav.SetDestination(this.posInicial);
                 if (transform.position.x == this.posInicial.x && transform.position.z == this.posInicial.z)
@@ -133,6 +145,10 @@ public class EnemyBehavior : MonoBehaviour {
                     this.estadoAtual = this.aoVoltarPosicaoInicial;
                 }
             }
+        }
+        else {
+            this.animMorrer();
+            Destroy(gameObject,2);
         }
 
     }
@@ -171,18 +187,24 @@ public class EnemyBehavior : MonoBehaviour {
         timer += Time.deltaTime;
         
         //Só usado para depurar
+        /*
         this.visao.setAbertura(this.aberturaDeVisao);
         this.visao.setAltura(this.alturaDeVisao);
         this.visao.setLargura(this.larguraDeVisao);
         this.visao.setRaio(this.raioDeVisao);
+        */
         //Debug.Log(timer);
-        if (this.visao.getVendoPlayer() && this.estadoAtual!= Enumerates.estadoComportamento.ATACAR)
+        if (this.visao.getVendoPlayer() && this.distanciaDoPlayer <= this.distanciaDeAtk && this.estadoAtual.Equals(Enumerates.estadoComportamento.IDLE)) {
+            this.estadoAtual = this.aoPlayerSeAproximar;
+        }
+        else if (this.visao.getVendoPlayer() && this.estadoAtual!= Enumerates.estadoComportamento.ATACAR && this.estadoAtual != this.aoPlayerSeAfastar)
         {
            // Debug.Log("vi ele");
             this.estadoAtual = this.aoVerPlayer;
             this.viuPlayerAntes = true;
             timer = 0;
         }
+
         else if(this.visao.getVendoPlayer() == false && timer >= this.tempoDesistirDeSeguir && this.viuPlayerAntes)
         {
            // Debug.Log("Perdi ele ");
@@ -232,5 +254,21 @@ public class EnemyBehavior : MonoBehaviour {
 
     }
     */
+    
+    protected void animIdle() {
+        this.enemyAnimator.SetTrigger("idle");
+    }
+    protected void animMovement() {
+        this.enemyAnimator.SetTrigger("moviment");
+    }
+    protected void animMorrer() {
+        this.enemyAnimator.SetTrigger("morrer");
+    }
+    protected void animReceberDano() {
+        this.enemyAnimator.SetTrigger("receberDano");
+    }
+    protected void animAttack() {
 
+        this.enemyAnimator.SetTrigger("attack");
+    }
 }
