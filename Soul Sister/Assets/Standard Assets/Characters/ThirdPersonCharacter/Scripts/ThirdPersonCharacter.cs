@@ -29,9 +29,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
 
+		private AnimationController animationController;
 
 		void Start()
 		{
+
+			animationController = GetComponent<AnimationController> ();
+
 			m_Animator = GetComponent<Animator>();
 			m_Rigidbody = GetComponent<Rigidbody>();
 			m_Capsule = GetComponent<CapsuleCollider>();
@@ -130,10 +134,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// calculate which leg is behind, so as to leave that leg trailing in the jump animation
 			// (This code is reliant on the specific run cycle offset in our animations,
 			// and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
+
+
 			float runCycle =
 				Mathf.Repeat(
 					m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime + m_RunCycleLegOffset, 1);
 			float jumpLeg = (runCycle < k_Half ? 1 : -1) * m_ForwardAmount;
+
+
 			if (m_IsGrounded)
 			{
 				m_Animator.SetFloat("JumpLeg", jumpLeg);
@@ -144,12 +152,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (m_IsGrounded && move.magnitude > 0)
 			{
 				m_Animator.speed = m_AnimSpeedMultiplier;
+
+
 			}
 			else
 			{
 				// don't use that while airborne
 				m_Animator.speed = 1;
+				//animationController.PlayAnimation (AnimationState.RUN);
 			}
+
+
 		}
 
 
@@ -186,6 +199,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void OnAnimatorMove()
 		{
+			//animationController.PlayAnimation (AnimationState.IDLE);
+
+
+
 			// we implement this function to override the default root motion.
 			// this allows us to modify the positional speed before it's applied.
 			if (m_IsGrounded && Time.deltaTime > 0)
@@ -213,6 +230,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_GroundNormal = hitInfo.normal;
 				m_IsGrounded = true;
 				m_Animator.applyRootMotion = true;
+
 			}
 			else
 			{

@@ -1,14 +1,57 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 4b8d70311915d144ab99c12a1d27a321
+timeCreated: 1519237257
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: body
+    100004: face
+    100006: Head
+    100008: head
+    100010: //RootNode
+    400000: Armature
+    400002: body
+    400004: face
+    400006: Head
+    400008: head
+    400010: //RootNode
+    4300000: Head
+    7400000: Default Take
+    7400002: Attack
+    7400004: Awake
+    7400006: death
+    7400008: Death
+    7400010: Hurt
+    7400012: idle
+    7400014: Movement
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Head
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__UVMimic_png
+    second: {fileID: 2100000, guid: 25244f534ae223b47b18fbc1c2c8f433, type: 2}
+=======
 guid: 2d0b13d4c27dea14c95bcf7a5d65f1f9
 timeCreated: 1519233992
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName: {}
+>>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+<<<<<<< HEAD
+    materialLocation: 0
+=======
+>>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -21,7 +64,12 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+<<<<<<< HEAD
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+=======
     animationCompression: 1
+>>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -68,10 +116,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+<<<<<<< HEAD
+    rootMotionBoneName: Head
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+=======
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
+>>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
