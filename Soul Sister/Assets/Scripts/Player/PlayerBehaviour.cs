@@ -12,7 +12,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField]
     private float tempoParaIdle = 100;
     [SerializeField]
-    private Enumerates.estadoComportamento estadoComp = Enumerates.estadoComportamento.DEFAULT;
+    private Animator animator;
     private float tempo = 0;
     private Arma arma;
     private Vector3 initialPosition;
@@ -37,19 +37,30 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         this.tempo = Time.deltaTime;
+
         if (this.controllerLife.getEstadoAtual() == Enumerates.estadoDeVida.Vivo) {
-            if(this.estadoComp == Enumerates.estadoComportamento.IDLE) {
-                //ANIMACAO DE IDLE
-            }
-            else if(this.estadoComp == Enumerates.estadoComportamento.ATACAR) {
+
+            if (Input.GetKey("space")) {
                 this.atacar();
+            }
+            else if (Input.GetKeyUp("space")) {
+                this.cancelarAnim();
             }
 
             else if(Input.anyKey) {
                 //Debug.Log("aki");
-                //Move();
+                this.animMovement();
+                Move();
             }
-            this.deveEntrarEmIdle();
+            else if (Input.anyKeyDown) {
+                cancelarAnim();
+            }
+            else {
+                this.animIdle();
+            }
+        }
+        else {
+
         }
 
     }
@@ -57,23 +68,16 @@ public class PlayerBehaviour : MonoBehaviour
     void Move()
     {
         this.tempo = 0;
-        this.estadoComp = Enumerates.estadoComportamento.DEFAULT;
         Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
         Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
 
-        //Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+        Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
-        //transform.forward = heading;
+        transform.forward = heading;
         transform.position += rightMovement * 2f;
         transform.position += upMovement * 2f;
     }
 
-    private void deveEntrarEmIdle()
-    {
-        if (this.tempo == this.tempoParaIdle) {
-            this.estadoComp = Enumerates.estadoComportamento.IDLE;
-        }
-    }
 
     private void inicializarArma()
     {
@@ -88,6 +92,49 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (this.arma != null) {
             this.arma.setAtk(true);
+            this.animAttack();
+        }
+    }
+
+    protected void animIdle()
+    {
+        if (!(this.animator.GetBool("attack") && this.animator.GetBool("walk"))) {
+            this.playAnim("idle");
+        }
+    }
+    protected void animMovement()
+    {
+        this.playAnim("walk");
+    }
+    protected void animMorrer()
+    {
+        this.playAnim("morrer");
+    }
+    protected void animReceberDano()
+    {
+        this.playAnim("receberDano");
+    }
+    protected void animAttack()
+    {
+        Debug.Log("anim attacl");
+        this.playAnim("attack");
+    }
+
+
+    protected void cancelarAnim()
+    {
+        this.animator.SetBool("idle", false);
+        this.animator.SetBool("walk", false);
+        this.animator.SetBool("morrer", false);
+        this.animator.SetBool("receberDano", false);
+        this.animator.SetBool("attack", false);
+    }
+
+    private void playAnim(String anim)
+    {
+        if (this.animator.GetBool(anim) == false) {
+            this.cancelarAnim();
+            this.animator.SetBool(anim, true);
         }
     }
 }
