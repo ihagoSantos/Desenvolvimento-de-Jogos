@@ -6,12 +6,14 @@ public class Post_Cutscene : MonoBehaviour {
 
 	public float tempoAtual ;
 	public float tempoParar ;
+	private AudioSource source;
+	public AudioClip efeitoClick;
 
 
 
 	// Use this for initialization
 	void Start () {
-
+		source = GetComponent<AudioSource>();
 
 	}
 
@@ -21,6 +23,12 @@ public class Post_Cutscene : MonoBehaviour {
 		if(this.tempoAtual == this.tempoParar){
 			Application.LoadLevel(2);
 		}
+	}
+	public void skipCutscene(){
+
+		source.PlayOneShot(efeitoClick);
+		Application.LoadLevel(2);
+
 	}
 
 }
