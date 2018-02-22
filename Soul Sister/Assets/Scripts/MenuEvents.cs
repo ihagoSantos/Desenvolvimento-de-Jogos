@@ -45,4 +45,10 @@ public class MenuEvents : MonoBehaviour {
 		Application.LoadLevel(0);
 	}
 
+	public void skipCutscene(){
+
+		source.PlayOneShot(efeitoClick);
+		Application.LoadLevel(2);
+
+	}
 }
