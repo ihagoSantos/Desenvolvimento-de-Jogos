@@ -95,6 +95,7 @@ ModelImporter:
     3300000: Sword
     4300000: Darius
     4300002: Sword
+    6400000: Sword
     7400000: Take 001
     9500000: //RootNode
     11100000: //RootNode
@@ -119,7 +120,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 1
+    optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -141,7 +142,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -488,23 +489,23 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Darius@Attack_3(Clone)(Clone)
+    - name: Darius@Attack_3(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Darius
-      parentName: Darius@Attack_3(Clone)(Clone)
+      parentName: Darius@Attack_3(Clone)
       position: {x: -0, y: 0, z: 0.0000000028764335}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1.4681369, y: 1.4681369, z: 1.4681369}
     - name: Sword
-      parentName: Darius@Attack_3(Clone)(Clone)
+      parentName: Darius@Attack_3(Clone)
       position: {x: 0.20871264, y: 0.33442584, z: -0.20738018}
-      rotation: {x: 0.27835917, y: 0.31095165, z: 0.7267672, w: 0.5455592}
+      rotation: {x: 0.27835914, y: 0.31095162, z: 0.7267671, w: 0.54555917}
       scale: {x: 0.9204554, y: 0.77944356, z: 0.92045075}
     - name: Darius_CAT_Pelvis_
-      parentName: Darius@Attack_3(Clone)(Clone)
+      parentName: Darius@Attack_3(Clone)
       position: {x: 0.000000023783903, y: 0.33502567, z: -0.0041479915}
       rotation: {x: 0.49912268, y: -0.50086725, z: -0.4991312, w: 0.5008759}
       scale: {x: 1, y: 1.0000001, z: 1}
