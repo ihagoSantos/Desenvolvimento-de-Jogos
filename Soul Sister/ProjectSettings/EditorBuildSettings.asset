@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TelaCredits.unity
     guid: 64a305871c63f1e4882faa0ddd53467c
+  - enabled: 1
+    path: Assets/Scenes/Terreno_fran.unity
+    guid: dc76b90ebb0e21d4c8a23de57b397f89

@@ -47,7 +47,7 @@ public class PlayerBehaviour : MonoBehaviour
 
             else if(Input.anyKey) {
                 //Debug.Log("aki");
-                Move();
+                //Move();
             }
             this.deveEntrarEmIdle();
         }

@@ -3,7 +3,11 @@ guid: 66b283e313e99aa4cba2ea59a884e89c
 timeCreated: 1447693213
 licenseType: Store
 ModelImporter:
+<<<<<<< HEAD
   serializedVersion: 22
+=======
+  serializedVersion: 21
+>>>>>>> b4c4c100a0954901a34dd0550ee68a58d778647f
   fileIDToRecycleName:
     100000: Darius
     100002: //RootNode
@@ -95,7 +99,7 @@ ModelImporter:
     3300000: Sword
     4300000: Darius
     4300002: Sword
-    7400000: Take 001
+    7400000: Walk
     9500000: //RootNode
     13700000: Darius
   externalObjects:
@@ -118,7 +122,11 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
+<<<<<<< HEAD
     optimizeGameObjects: 1
+=======
+    optimizeGameObjects: 0
+>>>>>>> b4c4c100a0954901a34dd0550ee68a58d778647f
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -126,15 +134,51 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+<<<<<<< HEAD
     importAnimatedCustomProperties: 0
     animationCompression: 3
+=======
+    animationCompression: 1
+>>>>>>> b4c4c100a0954901a34dd0550ee68a58d778647f
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
+<<<<<<< HEAD
     clipAnimations: []
+=======
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+>>>>>>> b4c4c100a0954901a34dd0550ee68a58d778647f
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -165,6 +209,7 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
+<<<<<<< HEAD
     human:
     - boneName: Darius_CAT_Pelvis_
       humanName: Hips
@@ -702,6 +747,10 @@ ModelImporter:
       position: {x: -0.07379668, y: 0.036440097, z: 0.008353967}
       rotation: {x: 0.022655115, y: -0.006573869, z: -0.39734423, w: 0.91736645}
       scale: {x: 1.0000002, y: 1.0000005, z: 1.0000004}
+=======
+    human: []
+    skeleton: []
+>>>>>>> b4c4c100a0954901a34dd0550ee68a58d778647f
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -712,7 +761,11 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+<<<<<<< HEAD
     hasExtraRoot: 1
+=======
+    hasExtraRoot: 0
+>>>>>>> b4c4c100a0954901a34dd0550ee68a58d778647f
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
