@@ -3,7 +3,7 @@ guid: 66b283e313e99aa4cba2ea59a884e89c
 timeCreated: 1447693213
 licenseType: Store
 ModelImporter:
-  serializedVersion: 18
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: Darius
     100002: //RootNode
@@ -98,25 +98,42 @@ ModelImporter:
     7400000: Take 001
     9500000: //RootNode
     13700000: Darius
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Darius
+    second: {fileID: 2100000, guid: e5f6cd1e408a98440b76d442d5c2a03f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sword
+    second: {fileID: 2100000, guid: 69cb5e2eda748984a9899f1499e19675, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    optimizeGameObjects: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -124,7 +141,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -138,25 +158,564 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    human: []
-    skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    serializedVersion: 2
+    human:
+    - boneName: Darius_CAT_Pelvis_
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_Ribcage
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Collarbone
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Collarbone
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Upperarm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Upperarm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Palm
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Palm
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Digit_1
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Digit_1
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_Eye_L
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_Eye_R
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_Jaw
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Digit_1_1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Digit_1_2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Digit_4_1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Digit_4_2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Digit_2_1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Digit_2_2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Digit_3_1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_L_Digit_3_2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Digit_1_1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Digit_1_2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Digit_4_1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Digit_4_2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Digit_2_1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Digit_2_2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Digit_3_1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Darius_CAT_R_Digit_3_2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Darius@Walk(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Darius
+      parentName: Darius@Walk(Clone)
+      position: {x: -0, y: 0, z: 0.0000000028764335}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1.4681369, y: 1.4681369, z: 1.4681369}
+    - name: Sword
+      parentName: Darius@Walk(Clone)
+      position: {x: 0.32915485, y: 0.75880116, z: -0.075766}
+      rotation: {x: 0.2796635, y: 0.76046276, z: -0.4923917, w: -0.31786025}
+      scale: {x: 0.8620693, y: 0.8620695, z: 0.8620696}
+    - name: Darius_CAT_Pelvis_
+      parentName: Darius@Walk(Clone)
+      position: {x: 0.000000026828596, y: 0.3189609, z: -0.004147984}
+      rotation: {x: 0.49912268, y: -0.50086725, z: -0.4991312, w: 0.5008759}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999999}
+    - name: Darius_CAT_L_Thigh
+      parentName: Darius_CAT_Pelvis_
+      position: {x: 0.038127802, y: 0.0040149735, z: 0.037637822}
+      rotation: {x: -0.062302522, y: 0.99131167, z: 0.0072417846, w: 0.11561711}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000006}
+    - name: Darius_CAT_L_Calf
+      parentName: Darius_CAT_L_Thigh
+      position: {x: -0.097053014, y: 0.0000006008148, z: 0.000006041527}
+      rotation: {x: 0.015305547, y: 0.092288025, z: 0.16806492, w: 0.98132706}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000007}
+    - name: Darius_CAT_L_Foot
+      parentName: Darius_CAT_L_Calf
+      position: {x: -0.15236536, y: -0.000000095367426, z: 0.000000009536743}
+      rotation: {x: -0.11925501, y: -0.03447867, z: -0.4545588, w: 0.88202375}
+      scale: {x: 1.0000006, y: 0.9999995, z: 0.99999964}
+    - name: Darius_CAT_L_Digit_1
+      parentName: Darius_CAT_L_Foot
+      position: {x: -0.08055749, y: 0.03612355, z: -0.0077979565}
+      rotation: {x: -0.022655323, y: 0.0065735877, z: -0.39734432, w: 0.9173664}
+      scale: {x: 1.0000005, y: 0.9999999, z: 1.0000005}
+    - name: Darius_CAT_Spine
+      parentName: Darius_CAT_Pelvis_
+      position: {x: -0.025930518, y: 0.008977456, z: -0.000000007152557}
+      rotation: {x: 0.000008672476, y: -0.0000008046627, z: 0.08053455, w: 0.9967519}
+      scale: {x: 1.0000008, y: 1.0000006, z: 1.0000006}
+    - name: Darius_CAT_Ribcage
+      parentName: Darius_CAT_Spine
+      position: {x: -0.21916157, y: 0.000000009536743, z: 0}
+      rotation: {x: 4.5974946e-10, y: -0.00000020585033, z: -0.45657024, w: -0.8896874}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.99999994}
+    - name: Darius_CAT_L_Collarbone
+      parentName: Darius_CAT_Ribcage
+      position: {x: 0.057534177, y: 0.028983954, z: 0.0757335}
+      rotation: {x: 0.036478058, y: -0.76552296, z: -0.20545281, w: -0.60863215}
+      scale: {x: 1.0000012, y: 0.9999991, z: 1.0000005}
+    - name: Darius_CAT_L_Upperarm
+      parentName: Darius_CAT_L_Collarbone
+      position: {x: -0.03917858, y: 0, z: -0.000000038146972}
+      rotation: {x: 0.31674787, y: -0.09403236, z: -0.091451034, w: 0.9393964}
+      scale: {x: 1.0000002, y: 0.99999964, z: 1.0000008}
+    - name: Darius_CAT_L_Forearm
+      parentName: Darius_CAT_L_Upperarm
+      position: {x: -0.0725643, y: 0.000000038146972, z: -0.0000000047683715}
+      rotation: {x: 0.01301762, y: -0.019800179, z: -0.035975374, w: 0.9990717}
+      scale: {x: 1.0000044, y: 0.9999988, z: 0.9999949}
+    - name: Darius_CAT_L_Palm
+      parentName: Darius_CAT_L_Forearm
+      position: {x: -0.11624397, y: 0, z: 0.0000000047683715}
+      rotation: {x: -0.0031088202, y: 0.01006453, z: 0.017983116, w: 0.99978286}
+      scale: {x: 1.0000012, y: 0.99999976, z: 0.9999993}
+    - name: Darius_CAT_L_Digit_3_1
+      parentName: Darius_CAT_L_Palm
+      position: {x: -0.06903635, y: -0.007405548, z: 0.0031144905}
+      rotation: {x: -0.0061587025, y: -0.100736424, z: 0.03461446, w: 0.9942917}
+      scale: {x: 1.000003, y: 1.0000011, z: 0.9999973}
+    - name: Darius_CAT_L_Digit_3_2
+      parentName: Darius_CAT_L_Digit_3_1
+      position: {x: -0.021974696, y: -0.000000019073486, z: 0}
+      rotation: {x: -0.0059542116, y: -0.04370083, z: -0.14094456, w: 0.9890346}
+      scale: {x: 1.0000085, y: 0.99999887, z: 0.9999925}
+    - name: Darius_CAT_L_Digit_4_1
+      parentName: Darius_CAT_L_Palm
+      position: {x: -0.06530637, y: -0.009248657, z: -0.023066139}
+      rotation: {x: -0.0012073575, y: -0.11565282, z: 0.0058821295, w: 0.9932716}
+      scale: {x: 0.9999974, y: 1.0000005, z: 1.0000024}
+    - name: Darius_CAT_L_Digit_4_2
+      parentName: Darius_CAT_L_Digit_4_1
+      position: {x: -0.027744673, y: 0, z: 0}
+      rotation: {x: 0.00016662269, y: -0.0038251579, z: -0.056513514, w: 0.99839455}
+      scale: {x: 0.9999991, y: 1, z: 1.0000019}
+    - name: Darius_CAT_L_Digit_2_1
+      parentName: Darius_CAT_L_Palm
+      position: {x: -0.063603096, y: 0.0015252494, z: 0.02891178}
+      rotation: {x: 0.018438281, y: -0.100053325, z: 0.058600053, w: 0.9930838}
+      scale: {x: 1.000004, y: 1.0000005, z: 0.99999666}
+    - name: Darius_CAT_L_Digit_2_2
+      parentName: Darius_CAT_L_Digit_2_1
+      position: {x: -0.015649319, y: -0.000000038146972, z: 0}
+      rotation: {x: 0.030308489, y: -0.11622438, z: -0.29873747, w: 0.9467466}
+      scale: {x: 1.0000045, y: 0.99999845, z: 0.9999993}
+    - name: Darius_CAT_L_Digit_1_1
+      parentName: Darius_CAT_L_Palm
+      position: {x: -0.027075062, y: -0.00061752315, z: -0.033892125}
+      rotation: {x: 0.03423159, y: -0.23428251, z: 0.048800074, w: 0.9703393}
+      scale: {x: 1.0000064, y: 1, z: 0.9999937}
+    - name: Darius_CAT_L_Digit_1_2
+      parentName: Darius_CAT_L_Digit_1_1
+      position: {x: -0.03132965, y: 0, z: 0.000000019073486}
+      rotation: {x: -0.0044639027, y: 0.029001884, z: -0.24928829, w: 0.9679847}
+      scale: {x: 1.0000007, y: 0.99999833, z: 1.0000018}
+    - name: Darius_CAT_Neck
+      parentName: Darius_CAT_Ribcage
+      position: {x: -0.00051048276, y: 0.042095732, z: -0.000000009536743}
+      rotation: {x: -0.00000011459152, y: 0.00000018631054, z: 0.32565776, w: -0.9454877}
+      scale: {x: 0.99999976, y: 1.0000001, z: 0.99999994}
+    - name: Darius_CAT_Head
+      parentName: Darius_CAT_Neck
+      position: {x: -0.11695419, y: -0.000000009536743, z: -0.0000000023841857}
+      rotation: {x: 0.00000007450581, y: -0, z: 0.18254699, w: -0.98319715}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000007}
+    - name: Darius_CAT_Jaw
+      parentName: Darius_CAT_Head
+      position: {x: 0.037190247, y: 0.09671733, z: -0.000000013113022}
+      rotation: {x: -0.000000037252907, y: -0.000000022351744, z: 0.9063078, w: -0.4226183}
+      scale: {x: 0.9999998, y: 1.000001, z: 0.99999994}
+    - name: Darius_CAT_Eye_L
+      parentName: Darius_CAT_Head
+      position: {x: -0.027772216, y: 0.17774738, z: 0.05452541}
+      rotation: {x: -0.000000008247385, y: -0.00000005817442, z: -0.70710677, w: 0.70710677}
+      scale: {x: 1.0000005, y: 1.0000015, z: 1.000001}
+    - name: Darius_CAT_Eye_R
+      parentName: Darius_CAT_Head
+      position: {x: -0.027772216, y: 0.1777474, z: -0.05452541}
+      rotation: {x: -0.000000008247385, y: -0.00000005817442, z: -0.70710677, w: 0.70710677}
+      scale: {x: 1.0000005, y: 1.0000015, z: 1.000001}
+    - name: Darius_CAT_R_Collarbone
+      parentName: Darius_CAT_Ribcage
+      position: {x: 0.05753414, y: 0.028983954, z: -0.075733505}
+      rotation: {x: 0.036479063, y: -0.7655204, z: 0.20545161, w: 0.60863566}
+      scale: {x: 0.9999988, y: 1.0000019, z: 1.0000002}
+    - name: Darius_CAT_R_Upperarm
+      parentName: Darius_CAT_R_Collarbone
+      position: {x: -0.03917858, y: 0, z: 0}
+      rotation: {x: -0.31893387, y: 0.09424121, z: -0.09124809, w: 0.9386552}
+      scale: {x: 1.0000004, y: 1.0000007, z: 0.9999995}
+    - name: Darius_CAT_R_Forearm
+      parentName: Darius_CAT_R_Upperarm
+      position: {x: -0.072564274, y: 0, z: 0}
+      rotation: {x: -0.013010351, y: 0.01987522, z: -0.035824735, w: 0.9990758}
+      scale: {x: 0.9999953, y: 1.0000006, z: 1.0000042}
+    - name: Darius_CAT_R_Palm
+      parentName: Darius_CAT_R_Forearm
+      position: {x: -0.11624399, y: 0, z: -0.000000019073486}
+      rotation: {x: 0.0054309377, y: -0.009827851, z: 0.017992135, w: 0.99977505}
+      scale: {x: 1.0000023, y: 1.0000005, z: 0.9999998}
+    - name: Darius_CAT_R_Digit_3_1
+      parentName: Darius_CAT_R_Palm
+      position: {x: -0.06903646, y: -0.0074055386, z: -0.0031144333}
+      rotation: {x: 0.006159528, y: 0.10073773, z: 0.034615416, w: 0.9942916}
+      scale: {x: 0.9999972, y: 1.0000002, z: 1.0000037}
+    - name: Darius_CAT_R_Digit_3_2
+      parentName: Darius_CAT_R_Digit_3_1
+      position: {x: -0.021974696, y: -0.000000019073486, z: 0}
+      rotation: {x: 0.005954269, y: 0.043700933, z: -0.14094447, w: 0.98903465}
+      scale: {x: 0.9999918, y: 1.000001, z: 1.0000073}
+    - name: Darius_CAT_R_Digit_2_1
+      parentName: Darius_CAT_R_Palm
+      position: {x: -0.063603155, y: 0.0015252685, z: -0.028911762}
+      rotation: {x: -0.018437302, y: 0.10005974, z: 0.058601927, w: 0.9930831}
+      scale: {x: 0.99999624, y: 1.0000007, z: 1.0000043}
+    - name: Darius_CAT_R_Digit_2_2
+      parentName: Darius_CAT_R_Digit_2_1
+      position: {x: -0.015649337, y: 0, z: 0}
+      rotation: {x: -0.030308306, y: 0.11622424, z: -0.29873753, w: 0.9467467}
+      scale: {x: 0.9999957, y: 1.0000024, z: 1.0000019}
+    - name: Darius_CAT_R_Digit_4_1
+      parentName: Darius_CAT_R_Palm
+      position: {x: -0.0653064, y: -0.009248648, z: 0.023066139}
+      rotation: {x: 0.00120806, y: 0.11565298, z: 0.0058830497, w: 0.9932715}
+      scale: {x: 1.000004, y: 1.0000006, z: 0.9999975}
+    - name: Darius_CAT_R_Digit_4_2
+      parentName: Darius_CAT_R_Digit_4_1
+      position: {x: -0.027744694, y: 0.000000019073486, z: 0}
+      rotation: {x: -0.00016650507, y: 0.0038250452, z: -0.05651364, w: 0.9983945}
+      scale: {x: 1.0000014, y: 1.0000014, z: 0.99999934}
+    - name: Darius_CAT_R_Digit_1_1
+      parentName: Darius_CAT_R_Palm
+      position: {x: -0.02707508, y: -0.0006175041, z: 0.033892173}
+      rotation: {x: -0.03423073, y: 0.23427904, z: 0.048801024, w: 0.97034013}
+      scale: {x: 0.9999957, y: 1.0000007, z: 1.0000049}
+    - name: Darius_CAT_R_Digit_1_2
+      parentName: Darius_CAT_R_Digit_1_1
+      position: {x: -0.03132963, y: -0.000000019073486, z: 0}
+      rotation: {x: 0.004464081, y: -0.02900191, z: -0.24928819, w: 0.96798474}
+      scale: {x: 0.9999999, y: 1.000003, z: 0.99999905}
+    - name: Darius_CAT_R_Thigh
+      parentName: Darius_CAT_Pelvis_
+      position: {x: 0.03812782, y: 0.0040149735, z: -0.037637815}
+      rotation: {x: -0.062376708, y: 0.99130774, z: -0.007860124, w: -0.11557001}
+      scale: {x: 1.0000001, y: 1, z: 1.0000005}
+    - name: Darius_CAT_R_Calf
+      parentName: Darius_CAT_R_Thigh
+      position: {x: -0.097053014, y: 0.000000019073486, z: 0.00000042915343}
+      rotation: {x: -0.015337124, y: -0.09215528, z: 0.16815262, w: 0.9813241}
+      scale: {x: 0.9999999, y: 1.0000006, z: 1}
+    - name: Darius_CAT_R_Foot
+      parentName: Darius_CAT_R_Calf
+      position: {x: -0.15042953, y: 0, z: -0.0000000047683715}
+      rotation: {x: 0.11869535, y: 0.034284532, z: -0.4545659, w: 0.8821031}
+      scale: {x: 0.9999997, y: 1.0000004, z: 1.0000002}
+    - name: Darius_CAT_R_Digit_1
+      parentName: Darius_CAT_R_Foot
+      position: {x: -0.07379668, y: 0.036440097, z: 0.008353967}
+      rotation: {x: 0.022655115, y: -0.006573869, z: -0.39734423, w: 0.91736645}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000004}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

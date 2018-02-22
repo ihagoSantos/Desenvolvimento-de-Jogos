@@ -1,8 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: e30814a4cd4c1864ca7f39299dc36f51
-timeCreated: 1519237261
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -36,31 +33,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Material_001__slimeUV
     second: {fileID: 2100000, guid: 1fec2d13f4e84394c96593aa28c1205e, type: 2}
-=======
-guid: 675bfc97596714743bd673ae4dffd35b
-timeCreated: 1519233992
-licenseType: Free
-ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName: {}
->>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-<<<<<<< HEAD
     materialLocation: 0
-=======
->>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-<<<<<<< HEAD
-    optimizeGameObjects: 1
-=======
     optimizeGameObjects: 0
->>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -68,21 +50,14 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-<<<<<<< HEAD
     importAnimatedCustomProperties: 0
-=======
->>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-<<<<<<< HEAD
     extraExposedTransformPaths:
     - Body
-=======
-    extraExposedTransformPaths: []
->>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
     extraUserProperties: []
     clipAnimations: []
     isReadable: 1
@@ -124,11 +99,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-<<<<<<< HEAD
-    rootMotionBoneName: Body
-=======
     rootMotionBoneName: 
->>>>>>> 7e6994e68aff7a4669f61e61c1956ae5ccfb084e
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
